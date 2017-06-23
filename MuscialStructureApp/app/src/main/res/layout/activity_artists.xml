@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="artists"
+                  type="com.example.android.muscialstructureapp.ArtistsActivity"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_description_artists"
+            style="@style/DescriptionTextStyle"
+            android:text="@string/description_artists_activity"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_library"
+            style="@style/ButtonStyle"
+            android:text="@string/title_library"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <include
+            android:id="@+id/lay_now_playing"
+            layout="@layout/item_now_playing"/>
+
+    </LinearLayout>
+</layout>
